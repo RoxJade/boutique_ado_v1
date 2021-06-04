@@ -21,7 +21,7 @@ class OrderForm(forms.ModelForm):
             'email': 'Email Address',
             'phone_number': 'Phone Number',
             'country': 'Country',
-            'postcode': 'Postal Code',                
+            'postcode': 'Postal Code',
             'town_or_city': 'Town or City',
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
@@ -30,7 +30,7 @@ class OrderForm(forms.ModelForm):
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:                    
+            if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
             else:
                 placeholder = placeholders[field]
